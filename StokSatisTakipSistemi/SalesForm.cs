@@ -16,5 +16,6 @@ namespace StokSatisTakipSistemi
         {
             InitializeComponent();
         }
+
     }
 }
