@@ -36,9 +36,9 @@
             this.cmbUrun = new System.Windows.Forms.ComboBox();
             this.nmrcAdet = new System.Windows.Forms.NumericUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSatis = new System.Windows.Forms.Button();
             this.txtToplam = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcAdet)).BeginInit();
@@ -103,16 +103,18 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(431, 256);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // button1
+            // btnEkle
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(69, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(255, 43);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Sepete Ekle";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEkle.Location = new System.Drawing.Point(69, 235);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(255, 43);
+            this.btnEkle.TabIndex = 7;
+            this.btnEkle.Text = "Sepete Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // label4
             // 
@@ -123,15 +125,16 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Toplam Tutar :";
             // 
-            // button2
+            // btnSatis
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(69, 439);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(268, 49);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Satışı Tamamla";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSatis.Location = new System.Drawing.Point(69, 439);
+            this.btnSatis.Name = "btnSatis";
+            this.btnSatis.Size = new System.Drawing.Size(268, 49);
+            this.btnSatis.TabIndex = 9;
+            this.btnSatis.Text = "Satışı Tamamla";
+            this.btnSatis.UseVisualStyleBackColor = true;
+            this.btnSatis.Click += new System.EventHandler(this.btnSatis_Click);
             // 
             // txtToplam
             // 
@@ -158,9 +161,9 @@
             this.ClientSize = new System.Drawing.Size(844, 591);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtToplam);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSatis);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.nmrcAdet);
             this.Controls.Add(this.cmbUrun);
@@ -172,7 +175,7 @@
             this.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.Name = "SalesForm";
             this.Text = "SalesForm";
-      
+            this.Load += new System.EventHandler(this.SalesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmrcAdet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -190,9 +193,9 @@
         private System.Windows.Forms.ComboBox cmbUrun;
         private System.Windows.Forms.NumericUpDown nmrcAdet;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSatis;
         private System.Windows.Forms.TextBox txtToplam;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

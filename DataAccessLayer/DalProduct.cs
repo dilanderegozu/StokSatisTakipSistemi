@@ -74,6 +74,34 @@ namespace DataAccessLayer
             cmd.ExecuteNonQuery();
             Baglanti.bgl.Close();
         }
+        public EntityProduct GetById(int id)
+        {
+            SqlCommand cmd = new SqlCommand(
+                "SELECT * FROM TBLPRODUCT WHERE ID=@p1 AND ISACTIVE=1",
+                Baglanti.bgl);
+
+            cmd.Parameters.AddWithValue("@p1", id);
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            EntityProduct urun = null;
+
+            if (dr.Read())
+            {
+                urun = new EntityProduct
+                {
+                    Id = Convert.ToInt32(dr["ID"]),
+                    Name = dr["NAME"].ToString(),
+                    CategoryId = Convert.ToInt32(dr["CATEGORYID"]),
+                    Price = Convert.ToDecimal(dr["PRICE"]),
+                    StockQuantity = Convert.ToInt32(dr["STOCKQUANTITY"]),
+                    IsActive = Convert.ToBoolean(dr["ISACTIVE"])
+                };
+            }
+
+            Baglanti.bgl.Close();
+            return urun;
+        }
 
     }
 }
