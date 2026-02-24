@@ -30,13 +30,13 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbltotal = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblgunluk = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblurun = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -63,15 +63,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Toplam Ciro";
             // 
-            // label2
+            // lbltotal
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(114, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 37);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "0";
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.BackColor = System.Drawing.Color.Lime;
+            this.lbltotal.Location = new System.Drawing.Point(114, 95);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(32, 37);
+            this.lbltotal.TabIndex = 2;
+            this.lbltotal.Text = "0";
             // 
             // dataGridView2
             // 
@@ -92,15 +92,15 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Günlük Ciro";
             // 
-            // label4
+            // lblgunluk
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(442, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 37);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "0";
+            this.lblgunluk.AutoSize = true;
+            this.lblgunluk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblgunluk.Location = new System.Drawing.Point(442, 95);
+            this.lblgunluk.Name = "lblgunluk";
+            this.lblgunluk.Size = new System.Drawing.Size(32, 37);
+            this.lblgunluk.TabIndex = 5;
+            this.lblgunluk.Text = "0";
             // 
             // dataGridView3
             // 
@@ -122,15 +122,15 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "En Çok Satılan Ürün";
             // 
-            // label6
+            // lblurun
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Location = new System.Drawing.Point(753, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 37);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "0";
+            this.lblurun.AutoSize = true;
+            this.lblurun.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblurun.Location = new System.Drawing.Point(753, 88);
+            this.lblurun.Name = "lblurun";
+            this.lblurun.Size = new System.Drawing.Size(32, 37);
+            this.lblurun.TabIndex = 8;
+            this.lblurun.Text = "0";
             // 
             // dataGridView4
             // 
@@ -146,19 +146,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 520);
             this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblurun);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblgunluk);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbltotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.Name = "ReportForm";
             this.Text = "ReportForm";
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -172,13 +173,13 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblgunluk;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblurun;
         private System.Windows.Forms.DataGridView dataGridView4;
     }
 }
