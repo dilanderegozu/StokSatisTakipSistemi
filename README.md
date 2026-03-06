@@ -82,4 +82,4 @@ Bu yapı sayesinde:
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/kullaniciadi/projeadi.git
+git clone https://github.com/dilanderegozu/StokSatisTakipSistemi.git
